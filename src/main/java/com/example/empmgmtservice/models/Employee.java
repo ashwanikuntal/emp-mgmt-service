@@ -4,8 +4,6 @@ import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
-import com.example.empmgmtservice.enums.Gender;
-
 @Component
 public class Employee {
 	
@@ -13,7 +11,7 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private Date dateOfBirth;
-	private Enum<Gender> gender;
+	private String gender;
 	private Date hireDate;
 	
 	public int getEmpId() {
@@ -40,10 +38,10 @@ public class Employee {
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	public Enum<Gender> getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(Enum<Gender> gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	public Date getHireDate() {
