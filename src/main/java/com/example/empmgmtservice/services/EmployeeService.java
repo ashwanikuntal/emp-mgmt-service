@@ -16,10 +16,10 @@ public class EmployeeService {
 	@Autowired
 	private NamedParameterJdbcTemplate namedJdbcTemplate;
 	
-	private static final String GET_EMPLOYEE_BY_ID = "SELECT actor_id, first_name, last_name, "
-			+ " date_of_birth, gender, hire_date from employee where actor_id = :empId";
+	private static final String GET_EMPLOYEE_BY_ID = "SELECT emp_id, first_name, last_name, "
+			+ " birth_date, gender, hire_date from employee where emp_id = :empId";
     private static final String GET_ALL_EMPLOYEES = "SELECT emp_id, first_name, last_name, "
-    		+ " date_of_birth, gender, hire_date from employee";
+    		+ " birth_date, gender, hire_date from employee";
     
     public List<Employee> getListOfAllEmployee() {
     	return this.namedJdbcTemplate.query(GET_ALL_EMPLOYEES, new EmployeeMapper());

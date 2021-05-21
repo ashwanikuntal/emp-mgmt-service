@@ -18,8 +18,8 @@ public class EmployeeMapper implements RowMapper<Employee> {
 		emp.setEmpId(rs.getInt("emp_id"));
 		emp.setFirstName(rs.getString("first_name"));
 		emp.setLastName(rs.getString("last_name"));
-		emp.setDateOfBirth(rs.getDate("date_of_birth"));
-		emp.setGender(Gender.valueOf(rs.getString("EnumColumn")));
+		emp.setDateOfBirth(rs.getDate("birth_date"));
+		emp.setGender(Gender.valueOf(rs.getString("gender")));
 		emp.setHireDate(rs.getDate("hire_date"));
 		
 		return emp;
