@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.example.empmgmtservice.enums.Gender;
 import com.example.empmgmtservice.models.Employee;
 
 public class EmployeeMapper implements RowMapper<Employee> {
@@ -19,7 +18,7 @@ public class EmployeeMapper implements RowMapper<Employee> {
 		emp.setFirstName(rs.getString("first_name"));
 		emp.setLastName(rs.getString("last_name"));
 		emp.setDateOfBirth(rs.getDate("birth_date"));
-		emp.setGender(Gender.valueOf(rs.getString("gender")));
+		emp.setGender(rs.getString("gender"));
 		emp.setHireDate(rs.getDate("hire_date"));
 		
 		return emp;
